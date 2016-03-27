@@ -1,17 +1,12 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace DianaSerializationDeserialization
+﻿namespace DianaSerializationDeserialization
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             //Creating our lesson Info
-            string[] Questions = new[] {"What Serialization", "Whye we use it", "Where you will use it"};
-            LessonInfo lessonInfo = new LessonInfo(120,"Seraializaion",Questions);
+            string[] questions = new[] {"What Serialization", "Whye we use it", "Where you will use it"};
+            LessonInfo lessonInfo = new LessonInfo(120,"Seraializaion",questions);
             string lessonPath = @"C:\Temp\lesson";
 
             //universal file Readar from abstarct Class
