@@ -4,6 +4,7 @@ namespace DianaSerializationDeserialization
     {
         public int LessonTime;
         public string LessonTopic;
+        public string[] LessonQuestions;
 
         public LessonInfo(int lessonTime, string lessonTopic, string[] lessonQuestions)
         {
@@ -11,7 +12,5 @@ namespace DianaSerializationDeserialization
             LessonTopic = lessonTopic;
             LessonQuestions = lessonQuestions;
         }
-
-        public string[] LessonQuestions;
     }
 }
