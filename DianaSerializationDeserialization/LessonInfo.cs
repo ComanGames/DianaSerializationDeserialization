@@ -6,6 +6,10 @@ namespace DianaSerializationDeserialization
         public string LessonTopic;
         public string[] LessonQuestions;
 
+        public LessonInfo()
+        {
+        }
+
         public LessonInfo(int lessonTime, string lessonTopic, string[] lessonQuestions)
         {
             LessonTime = lessonTime;
