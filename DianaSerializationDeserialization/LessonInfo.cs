@@ -1,5 +1,8 @@
+using System;
+
 namespace DianaSerializationDeserialization
 {
+    [Serializable]
     internal class LessonInfo
     {
         public int LessonTime;
