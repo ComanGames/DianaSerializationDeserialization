@@ -1,4 +1,6 @@
-﻿namespace DianaSerializationDeserialization
+﻿using System;
+
+namespace DianaSerializationDeserialization
 {
     class Program
     {
@@ -26,6 +28,8 @@
             lessonReaderWriter   = new TextLessonReaderWriter();
             lessonReaderWriter.SaveLesson(lessonPath + ".txt", lessonInfo);
             lessonReaderWriter.LoadLesson(lessonPath + ".txt");
+
+            Console.ReadKey();
         }
     }
 }
