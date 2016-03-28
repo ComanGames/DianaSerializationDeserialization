@@ -17,7 +17,7 @@ namespace DianaSerializationDeserialization
 
         public override LessonInfo LoadLesson(string path)
         {
-            LessonInfo lessonInfo = new LessonInfo();
+            LessonInfo lessonInfo;
             BinaryFormatter mBinaryFormatter = new BinaryFormatter();
             using (Stream fileStream = File.OpenRead(path))
             {
