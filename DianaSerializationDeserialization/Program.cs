@@ -10,7 +10,6 @@ namespace DianaSerializationDeserialization
             string[] questions = new[] {"What Serialization", "Why we use it", "Where you will use it"};
             LessonInfo lessonInfo = new LessonInfo(120,"Serialization",questions);
             string lessonPath = @"C:\Temp\lesson";
-
             //Universal file Reader from abstract Class
             LessonReaderWriter lessonReaderWriter;
 

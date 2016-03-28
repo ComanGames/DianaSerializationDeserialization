@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.IO;
 
 
@@ -12,7 +13,10 @@ namespace DianaSerializationDeserialization
             {
                 writer.WriteLine(lessonInfo.LessonTime.ToString());
                 writer.WriteLine(lessonInfo.LessonTopic);
-                writer.WriteLine(lessonInfo.LessonQuestions);
+                for (int i = 0; i < lessonInfo.LessonQuestions.Length; i++)
+                {
+                    writer.WriteLine(lessonInfo.LessonQuestions[i]);
+                }
             }
         }
 
@@ -21,13 +25,18 @@ namespace DianaSerializationDeserialization
             LessonInfo lessonInfo = new LessonInfo();
             using (StreamReader reader = File.OpenText(path))
             {
-                string input;
-                while ((input = reader.ReadLine()) != null)
+                lessonInfo.LessonTime = Int32.Parse(reader.ReadLine());
+                lessonInfo.LessonTopic = reader.ReadLine();
+                string lessonQuestion = reader.ReadLine();
+                List<string> qestionList = new List<string>();
+                while (lessonQuestion != string.Empty)
                 {
-                    Console.WriteLine(input);
+                    qestionList.Add(lessonQuestion);
+                    lessonQuestion = reader.ReadLine();
                 }
+                lessonInfo.LessonQuestions = qestionList.ToArray();
             }
-            return lessonInfo;
+                return lessonInfo;
         }
     }
 }
