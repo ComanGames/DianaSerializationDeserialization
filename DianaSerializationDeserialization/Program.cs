@@ -5,15 +5,16 @@
         static void Main()
         {
             //Creating our lesson Info
-            string[] questions = new[] {"What Serialization", "Whye we use it", "Where you will use it"};
-            LessonInfo lessonInfo = new LessonInfo(120,"Seraializaion",questions);
+            string[] questions = new[] {"What Serialization", "Why we use it", "Where you will use it"};
+            LessonInfo lessonInfo = new LessonInfo(120,"Serialization",questions);
             string lessonPath = @"C:\Temp\lesson";
 
-            //universal file Readar from abstarct Class
+            //universal file Reader from abstract Class
+           
             LessonReaderWriter lessonReaderWriter;
 
             //Xml Serialization
-            lessonReaderWriter   = new XmlLessonReaderWriter();
+            lessonReaderWriter = new XmlLessonReaderWriter();
             lessonReaderWriter.SaveLesson(lessonPath+".xml",lessonInfo);
             lessonReaderWriter.LoadLesson(lessonPath + ".xml");
 
