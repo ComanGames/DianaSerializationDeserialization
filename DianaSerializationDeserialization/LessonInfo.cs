@@ -3,7 +3,7 @@ using System;
 namespace DianaSerializationDeserialization
 {
     [Serializable]
-    internal class LessonInfo
+    public class LessonInfo
     {
         public int LessonTime;
         public string LessonTopic;
