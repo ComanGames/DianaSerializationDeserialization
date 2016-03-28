@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DianaSerializationDeserialization", "DianaSerializationDeserialization\DianaSerializationDeserialization.csproj", "{D9C66522-8292-499C-BCFA-F8A533AD9783}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LessonClient", "DianaSerializationDeserialization\LessonClient.csproj", "{D9C66522-8292-499C-BCFA-F8A533AD9783}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SerializationLibery", "SerializationLibery\SerializationLibery.csproj", "{3DAC59CF-ABAA-4BEE-98DB-9B3B6423757D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{D9C66522-8292-499C-BCFA-F8A533AD9783}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D9C66522-8292-499C-BCFA-F8A533AD9783}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D9C66522-8292-499C-BCFA-F8A533AD9783}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DAC59CF-ABAA-4BEE-98DB-9B3B6423757D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DAC59CF-ABAA-4BEE-98DB-9B3B6423757D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DAC59CF-ABAA-4BEE-98DB-9B3B6423757D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DAC59CF-ABAA-4BEE-98DB-9B3B6423757D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

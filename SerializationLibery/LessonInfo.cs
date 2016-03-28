@@ -1,6 +1,6 @@
 using System;
 
-namespace DianaSerializationDeserialization
+namespace SerializationLibery
 {
     [Serializable]
     public class LessonInfo

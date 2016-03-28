@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using System.IO;
 
-
-namespace DianaSerializationDeserialization
+namespace SerializationLibery
 {
-    internal class TextLessonReaderWriter : LessonReaderWriter
+    public class TextLessonReaderWriter : LessonReaderWriter
     {
         public override void SaveLesson(string path, LessonInfo lessonInfo)
         {

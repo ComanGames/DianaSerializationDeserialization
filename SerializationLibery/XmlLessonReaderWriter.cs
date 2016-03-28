@@ -1,9 +1,9 @@
 ﻿using System.IO;
 using System.Xml.Serialization;
 
-namespace DianaSerializationDeserialization
+namespace SerializationLibery
 {
-    internal class XmlLessonReaderWriter : LessonReaderWriter
+    public class XmlLessonReaderWriter : LessonReaderWriter
     {
         public override void SaveLesson(string path, LessonInfo lessonInfo)
         {
