@@ -1,5 +1,4 @@
-﻿using System;
-using System.IO;
+﻿using System.IO;
 using System.Xml.Serialization;
 
 namespace DianaSerializationDeserialization
@@ -18,7 +17,6 @@ namespace DianaSerializationDeserialization
         public override LessonInfo LoadLesson(string path)
         {
             XmlSerializer newSerializer = new XmlSerializer(typeof (LessonInfo));
-            // LessonInfo lessonInfo = new LessonInfo(); Wrong
             LessonInfo lessonInfo;
             using (Stream reader = new FileStream(path, FileMode.Open))
             {

@@ -9,9 +9,7 @@
             LessonInfo lessonInfo = new LessonInfo(120,"Serialization",questions);
             string lessonPath = @"C:\Temp\lesson";
 
-            //universal file Reader from abstract Class
-            //universal file Reader from abstract Class
-           
+            //Universal file Reader from abstract Class
             LessonReaderWriter lessonReaderWriter;
 
             //Xml Serialization
@@ -19,16 +17,15 @@
             lessonReaderWriter.SaveLesson(lessonPath+".xml",lessonInfo);
             lessonReaderWriter.LoadLesson(lessonPath + ".xml");
 
-            //Text Serialization
-             lessonReaderWriter   = new TextLessonReaderWriter();
-            lessonReaderWriter.SaveLesson(lessonPath + ".txt", lessonInfo);
-            lessonReaderWriter.LoadLesson(lessonPath + ".txt");
-
             //Binary Serialization
             lessonReaderWriter = new BinaryLessonReaderWriter();
             lessonReaderWriter.SaveLesson(lessonPath + ".lessonInfo", lessonInfo);
             lessonReaderWriter.LoadLesson(lessonPath + ".lessonInfo");
 
+            //Text Serialization
+            lessonReaderWriter   = new TextLessonReaderWriter();
+            lessonReaderWriter.SaveLesson(lessonPath + ".txt", lessonInfo);
+            lessonReaderWriter.LoadLesson(lessonPath + ".txt");
         }
     }
 }
