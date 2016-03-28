@@ -10,6 +10,7 @@
             string lessonPath = @"C:\Temp\lesson";
 
             //universal file Reader from abstract Class
+            //universal file Reader from abstract Class
            
             LessonReaderWriter lessonReaderWriter;
 

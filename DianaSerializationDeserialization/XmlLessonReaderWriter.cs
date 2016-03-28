@@ -6,6 +6,7 @@ namespace DianaSerializationDeserialization
     {
         public override void SaveLesson(string path, LessonInfo lessonInfo)
         {
+            throw new NotImplementedException();
         }
 
         public override LessonInfo LoadLesson(string path)

@@ -1,10 +1,11 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace DianaSerializationDeserialization
 {
     internal class BinaryLessonReaderWriter : LessonReaderWriter
-    {
+    { 
         public override void SaveLesson(string path, LessonInfo lessonInfo)
         {
             BinaryFormatter myBinFormatter = new BinaryFormatter();
@@ -16,7 +17,13 @@ namespace DianaSerializationDeserialization
 
         public override LessonInfo LoadLesson(string path)
         {
-            throw new System.NotImplementedException();
+            LessonInfo lessonInfo = new LessonInfo();
+            BinaryFormatter mBinaryFormatter = new BinaryFormatter();
+            using (Stream fileStream = File.OpenRead(path))
+            {
+                lessonInfo = (LessonInfo) mBinaryFormatter.Deserialize(fileStream);
+            }
+            return lessonInfo;
         }
     }
 }
