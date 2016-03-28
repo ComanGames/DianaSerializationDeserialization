@@ -1,4 +1,6 @@
 ﻿using System;
+using System.IO;
+using System.Xml.Serialization;
 
 namespace DianaSerializationDeserialization
 {
@@ -6,12 +8,22 @@ namespace DianaSerializationDeserialization
     {
         public override void SaveLesson(string path, LessonInfo lessonInfo)
         {
-            throw new NotImplementedException();
+            XmlSerializer myXmlSerializer = new XmlSerializer(typeof (LessonInfo));
+            using (Stream fileStream = new FileStream(path, FileMode.Create, FileAccess.Write, FileShare.None))
+            {
+                myXmlSerializer.Serialize(fileStream, lessonInfo);
+            }
         }
 
         public override LessonInfo LoadLesson(string path)
         {
-            throw new NotImplementedException();
+            XmlSerializer newSerializer = new XmlSerializer(typeof (LessonInfo));
+            LessonInfo lessonInfo = new LessonInfo();
+            using (Stream reader = new FileStream(path, FileMode.Open))
+            {
+                lessonInfo = (LessonInfo) newSerializer.Deserialize(reader);
+            }
+            return lessonInfo;
         }
     }
 }
