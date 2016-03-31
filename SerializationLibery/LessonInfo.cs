@@ -1,19 +1,20 @@
 using System;
+using System.Collections.Generic;
 
 namespace SerializationLibery
 {
     [Serializable]
     public class LessonInfo
     {
-        public int LessonTime;
+        public TimeSpan LessonTime;
         public string LessonTopic;
-        public string[] LessonQuestions;
+        public List<string> LessonQuestions;
 
         public LessonInfo()
         {
         }
 
-        public LessonInfo(int lessonTime, string lessonTopic, string[] lessonQuestions)
+        public LessonInfo(TimeSpan lessonTime, string lessonTopic, List<string> lessonQuestions)
         {
             LessonTime = lessonTime;
             LessonTopic = lessonTopic;

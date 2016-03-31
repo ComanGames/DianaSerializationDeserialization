@@ -12,7 +12,7 @@ namespace SerializationLibery
             {
                 writer.WriteLine(lessonInfo.LessonTime.ToString());
                 writer.WriteLine(lessonInfo.LessonTopic);
-                for (int i = 0; i < lessonInfo.LessonQuestions.Length; i++)
+                for (int i = 0; i < lessonInfo.LessonQuestions.Count; i++)
                 {
                     writer.WriteLine(lessonInfo.LessonQuestions[i]);
                 }
@@ -24,16 +24,16 @@ namespace SerializationLibery
             LessonInfo lessonInfo = new LessonInfo();
             using (StreamReader reader = File.OpenText(path))
             {
-                lessonInfo.LessonTime = Int32.Parse(reader.ReadLine());
+                lessonInfo.LessonTime = TimeSpan.Parse(reader.ReadLine());
                 lessonInfo.LessonTopic = reader.ReadLine();
                 string lessonQuestion = reader.ReadLine();
-                List<string> qestionList = new List<string>();
+                List<string> questionList = new List<string>();
                 while (lessonQuestion != string.Empty)
                 {
-                    qestionList.Add(lessonQuestion);
+                    questionList.Add(lessonQuestion);
                     lessonQuestion = reader.ReadLine();
                 }
-                lessonInfo.LessonQuestions = qestionList.ToArray();
+                lessonInfo.LessonQuestions = questionList;
             }
                 return lessonInfo;
         }
