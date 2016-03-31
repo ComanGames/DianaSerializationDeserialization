@@ -44,11 +44,11 @@ namespace DianaSerializationDeserialization
            return ts;
         }
 
-        class Program
+    class Program
+    {
+        static void Main()
         {
-            static void Main()
-            {
-                //Creating our lesson Info
+            //Creating our lesson Info
                 Utilities newUtilities = new Utilities();
                 newUtilities.AddTopic();
                 Console.Clear();
@@ -73,28 +73,28 @@ namespace DianaSerializationDeserialization
                 }
                 
                 LessonInfo lessonInfo = new LessonInfo(newUtilities.SetTime(), newUtilities.AddTopic(), newUtilities.CreatArrayOfQuestions());
-                string lessonPath = @"C:\Temp\lesson";
-                //Universal file Reader from abstract Class
-                LessonReaderWriter lessonReaderWriter;
+            string lessonPath = @"C:\Temp\lesson";
+            //Universal file Reader from abstract Class
+            LessonReaderWriter lessonReaderWriter;
 
-                //Text Serialization
+            //Text Serialization
                 lessonReaderWriter = new TextLessonReaderWriter();
-                lessonReaderWriter.SaveLesson(lessonPath + ".txt", lessonInfo);
+            lessonReaderWriter.SaveLesson(lessonPath + ".txt", lessonInfo);
 //            lessonReaderWriter.LoadLesson(lessonPath + ".txt");
 
-                //Xml Serialization
-                lessonReaderWriter = new XmlLessonReaderWriter();
+            //Xml Serialization
+            lessonReaderWriter = new XmlLessonReaderWriter();
                 lessonReaderWriter.SaveLesson(lessonPath + ".xml", lessonInfo);
-                //            lessonReaderWriter.LoadLesson(lessonPath + ".xml");
+            //            lessonReaderWriter.LoadLesson(lessonPath + ".xml");
 
-                //Binary Serialization
-                lessonReaderWriter = new BinaryLessonReaderWriter();
-                lessonReaderWriter.SaveLesson(lessonPath + ".lessonInfo", lessonInfo);
-                //            lessonReaderWriter.LoadLesson(lessonPath + ".lessonInfo");
+            //Binary Serialization
+            lessonReaderWriter = new BinaryLessonReaderWriter();
+            lessonReaderWriter.SaveLesson(lessonPath + ".lessonInfo", lessonInfo);
+            //            lessonReaderWriter.LoadLesson(lessonPath + ".lessonInfo");
 
 
-                Console.ReadKey();
-            }
+            Console.ReadKey();
         }
     }
+}
 }
