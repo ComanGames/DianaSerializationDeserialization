@@ -29,7 +29,6 @@ namespace DianaSerializationDeserialization
             lessonReaderWriter.SaveLesson(lessonPath + ".lessonInfo", lessonInfo);
             //            lessonReaderWriter.LoadLesson(lessonPath + ".lessonInfo");
 
-
             Console.ReadKey();
         }
     }
