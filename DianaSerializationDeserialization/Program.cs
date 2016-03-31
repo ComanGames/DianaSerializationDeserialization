@@ -22,6 +22,8 @@ namespace DianaSerializationDeserialization
 
         public List<string> CreatArrayOfQuestions()
         {
+            if (questionsList == null)
+                questionsList = new List<string>();
             Console.WriteLine("Type in new question");
             questionsList.Add(Console.ReadLine());
 
